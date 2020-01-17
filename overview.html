@@ -4,9 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Overview</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Übersicht</title>
   </head>
   <body>
-    <h1></h1>
+    <h1>Dorfladen</h1>
+    <ul id="products" class="flex-container"></ul>
+    <!-- <div class="flex-container">
+      <div class="flex-item">
+        <img src="./beispiel-assets/appenzeller.jpg" alt=Appenzeller">
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/eier.jpg" alt="Eggs" />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/icedtea.jpg" alt="Ice Tea" />
+      </div>
+      <div class="flex-item" class="flex-item">
+        <img
+          src="./beispiel-assets/kalbsbratwuerste.jpg"
+          alt="Kalbsbratwurst"
+        />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/krustenkranz.jpg" alt="Crusty" />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/nektarinen.jpg" alt="Nectarines" />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/olivenoel.jpg" alt="Olive oil" />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/senf.jpg" alt="Mustard" />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/tomaten.jpg" alt="Tomato" />
+      </div>
+      <div class="flex-item">
+        <img src="./beispiel-assets/vanille_glace.jpg" alt="Vanilla icecream" />
+      </div>
+    </div> -->
+    <script>
+      fetch('./api/products')
+        .then(response => response.json())
+        .then(products => {
+          const container =
+            '<li class="flex-item">' +
+            ` <img src="./beispiel-assets/${productImg}" alt=${productName}">` +
+            '</li>';
+          products.forEach(product => {
+            const productName = productName;
+            const productImg = imageName;
+            productName.addChild(productImg); // ?
+            container.addChild(productDiv); // ?
+          });
+        });
+    </script>
   </body>
 </html>

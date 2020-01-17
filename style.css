@@ -1,0 +1,18 @@
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+.flex-item {
+  list-style: none;
+  /* flex: 0, 1, auto; */
+  /* width: 100px; */
+  /* height: 100px; */
+  padding: 5%;
+  margin: auto;
+}
+img {
+  max-width: 200px;
+  /* padding: 20%; */
+}

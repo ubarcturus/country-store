@@ -26,6 +26,12 @@ app.get('/shopping_cart', (request, response) => {
   response.sendFile(path.join(__dirname, 'shopping_cart.html'));
 });
 
+//backend
+
+app.get('/api/products', (request, response) => {
+  response.sendFile(path.join(__dirname, './beispiel-assets/products.json'));
+});
+
 /* app.get('/', (req, res) => {
   res.send(`The resource '/' has been requested`);
 }); */
